@@ -1,0 +1,35 @@
+;PEA Projekt - plik konfiguracyjny
+;
+; Informacje dotycz¹ce danych ( w nawiasach wartoœci jakie przyjmuj¹ parametry)
+; [Tabu search]
+; Time - czas wykonywania tabu search w sekundach (float)
+; TabuSize - wielkoœæ tablicy tabu (liczba, n*liczba lub n/liczba, gdzie n to rozmiar instancji; int)
+; Cadency - kadencja elementu w tabu (liczba, n*liczba lub n/liczba, gdzie n to rozmiar instancji; int)
+; Aspiration - czy u¿yta zostanie funkcja aspiracji, czy nie (1 - tak, 0 - nie, lub tak gdy wartoœæ bêdzie z³a)
+; CriticalIterations - liczba iteracji bez popawy rozwi¹zania, po których nastêpuje reset aktualnego rozwi¹zania na nowe wybrane losowo
+;
+; [Genetic]
+; TimeLimit - czas wykonywania algorytmu genetycznego w sekundach (float)
+; StartPopulationSize - Wielkoœæ populacji (liczba, n*liczba lub n/liczba, gdzie n to rozmiar instancji; int)
+; ReproductionProbability - Prawdopodobieñstwo reprodukcji (float od 0.1 do 1)
+; MutationProbability - Prawdopodobieñstwo wyst¹pienia mutacji (float od 0 do 1)
+
+
+[TabuSearch]
+Time=5
+TabuSize=n/4
+Cadency=n/5
+Aspiration=0
+CriticalIterations=1000
+
+TabuEnd;
+
+; -----------------------------------------------------
+
+[Genetic]
+TimeLimit=999999999
+PopulationSize=n/4
+ReproductionProbability=0.5
+MutationProbability=0.1
+
+GeneticEnd;
